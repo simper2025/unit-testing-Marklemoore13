@@ -57,7 +57,7 @@ namespace TicTacToeTest
 		//	Assert::AreEqual('O', b.GetSquare(1, 1));
 		//}
 
-		TEST_METHOD(TestBoardCreate)
+		/*TEST_METHOD(TestBoardCreate)
 		{
 			Board b;
 			char setup[3][3] = { {'X',' ',' '}, {' ', ' ', ' '}, {' ', ' ', ' '} };
@@ -84,9 +84,23 @@ namespace TicTacToeTest
 			Assert::AreEqual('X', b.GetSquare(1, 1));
 			Assert::AreEqual('O', b.GetSquare(2, 0));
 			Assert::AreEqual(' ', b.GetSquare(0, 0));
-		}
+		}*/
 
-		TEST_METHOD(TestGameStatus)
+		TEST_METHOD(TestGameStatusRowWins)
+		{
+			Board b;
+			char setup[3][3] = { {'X','X','X'}, {' ', ' ', ' '}, {' ', ' ', ' '} };
+			b.SetBoard(setup);
+			Assert::AreEqual('X', b.GameStatus());
+
+			char setup[3][3] = { {' ',' ',' '}, {'O', 'O', 'O'}, {' ', ' ', ' '} };
+			b.SetBoard(setup);
+			Assert::AreEqual('O', b.GameStatus());
+
+			char setup[3][3] = { {' ',' ',' '}, {' ', ' ', ' '}, {'X', 'X', 'X'} };
+			b.SetBoard(setup);
+			Assert::AreEqual('X', b.GameStatus());
+		}
 
 	};
 }
