@@ -41,15 +41,18 @@ char Board::GameStatus()
 			winner = grid[0][i];
 			break;
 		}
+	}
+	for (int i = 0; i < 3; i++)
+	{
 		for (int j = 0; j < 3; j++)
 		{
 			if (grid[i][j] == 'X' || grid[i][j] == 'O')
 			{
-				winner == 'T';
+				winner = 'T';
 			}
 			else
 			{
-				return ' ';
+				winner = ' ';
 			}
 		}
 	}
