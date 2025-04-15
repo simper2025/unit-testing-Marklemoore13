@@ -86,5 +86,7 @@ namespace TicTacToeTest
 			Assert::AreEqual(' ', b.GetSquare(0, 0));
 		}
 
+		TEST_METHOD(TestGameStatus)
+
 	};
 }
