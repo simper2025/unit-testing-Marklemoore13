@@ -42,25 +42,25 @@ char Board::GameStatus()
 			break;
 		}
 	}
-	for (int i = 0; i < 3; i++)
-	{
-		for (int j = 0; j < 3; j++)
+
+	if (winner == ' ') {
+		for (int i = 0; i < 3; i++)
 		{
-			if (winner == ' ') {
-				if (grid[i][j] == 'X' || grid[i][j] == 'O')
-				{
-					winner = 'T';
-				}
-				else
+			for (int j = 0; j < 3; j++)
+			{
+				if (grid[i][j] == ' ')
 				{
 					winner = ' ';
 					break;
 				}
+				else
+				{
+					winner = 'T';
+				}
 			}
-			else
-				break;
 		}
 	}
+
 	if (grid[0][0] == grid[1][1] && grid[1][1] == grid[2][2] && grid[0][0] != ' ')
 	{
 		winner = grid[0][0];
