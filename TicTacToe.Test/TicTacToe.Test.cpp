@@ -146,12 +146,10 @@ namespace TicTacToeTest
 			b.SetBoard(setup1);
 			Assert::AreEqual(' ', b.GameStatus());
 
-			Board b;
 			char setup2[3][3] = { {'X',' ',' '}, {' ', 'O', ' '}, {' ', ' ', 'X'} };
 			b.SetBoard(setup2);
 			Assert::AreEqual(' ', b.GameStatus());
 
-			Board b;
 			char setup3[3][3] = { {' ','O','O'}, {' ', 'X', 'X'}, {'X', 'X', ' '} };
 			b.SetBoard(setup3);
 			Assert::AreEqual(' ', b.GameStatus());
