@@ -54,6 +54,7 @@ char Board::GameStatus()
 				else
 				{
 					winner = ' ';
+					break;
 				}
 			}
 			else
