@@ -46,14 +46,18 @@ char Board::GameStatus()
 	{
 		for (int j = 0; j < 3; j++)
 		{
-			if (grid[i][j] == 'X' || grid[i][j] == 'O')
-			{
-				winner = 'T';
+			if (winner == ' ') {
+				if (grid[i][j] == 'X' || grid[i][j] == 'O')
+				{
+					winner = 'T';
+				}
+				else
+				{
+					winner = ' ';
+				}
 			}
 			else
-			{
-				winner = ' ';
-			}
+				break;
 		}
 	}
 	if (grid[0][0] == grid[1][1] && grid[1][1] == grid[2][2] && grid[0][0] != ' ')
