@@ -89,16 +89,16 @@ namespace TicTacToeTest
 		TEST_METHOD(TestGameStatusRowWins)
 		{
 			Board b;
-			char setup[3][3] = { {'X','X','X'}, {' ', ' ', ' '}, {' ', ' ', ' '} };
-			b.SetBoard(setup);
+			char setup1[3][3] = { {'X','X','X'}, {' ', ' ', ' '}, {' ', ' ', ' '} };
+			b.SetBoard(setup1);
 			Assert::AreEqual('X', b.GameStatus());
 
-			char setup[3][3] = { {' ',' ',' '}, {'O', 'O', 'O'}, {' ', ' ', ' '} };
-			b.SetBoard(setup);
+			char setup2[3][3] = { {' ',' ',' '}, {'O', 'O', 'O'}, {' ', ' ', ' '} };
+			b.SetBoard(setup2);
 			Assert::AreEqual('O', b.GameStatus());
 
-			char setup[3][3] = { {' ',' ',' '}, {' ', ' ', ' '}, {'X', 'X', 'X'} };
-			b.SetBoard(setup);
+			char setup3[3][3] = { {' ',' ',' '}, {' ', ' ', ' '}, {'X', 'X', 'X'} };
+			b.SetBoard(setup3);
 			Assert::AreEqual('X', b.GameStatus());
 		}
 
